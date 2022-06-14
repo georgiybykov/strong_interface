@@ -33,8 +33,10 @@ module StrongInterface
       end
     end
 
-    def description(metod)
-      metod.inspect.scan(/[.|#](\S+?\(.*?\))/).last.first
+    private
+
+    def description(method)
+      method.inspect.scan(/[.|#](\S+?\(.*?\))/).last.first
     end
   end
 end
